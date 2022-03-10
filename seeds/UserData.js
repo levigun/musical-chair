@@ -1,0 +1,17 @@
+[
+    {
+    username: "oscarb",
+    email: "oscar@ocb.com",
+    password: "oscar",
+    },
+    {
+    username: "sasans",
+    email: "sasan@ss.com",
+    password: "sasan",
+    },
+    {
+    username: "levinag",
+    email: "levina@lg.com",
+    password: "levina",
+    }
+]
