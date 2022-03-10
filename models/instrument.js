@@ -23,10 +23,10 @@ Instrument.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    // image: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+     image: {
+       type: DataTypes.STRING,
+       allowNull: false,
+    },
     family_id: {
       type: DataTypes.INTEGER,
       references: {
