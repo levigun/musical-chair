@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// Get all families for homepage
 
 router.post('/', async (req, res) => {
   try {
