@@ -1,1 +1,33 @@
-{{!-- has the forms for selling --}}
+<div class="login-card">
+    <h2 class="page-title">What do you want to sell?</h2>
+    <form class="form signup-form" action="/action_page.php">
+        <div class="form-group">
+            <label for="username-signup">Family:</label>
+            <select name="family" id="family">
+                <option value="strings">Strings</option>
+                <option value="brass">Brass</option>
+                <option value="woodwind">Woodwind</option>
+                <option value="percussion">Percussion</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Instrument Name:</label>
+            <input class="form-input" type="text" id="instrument-name" />
+        </div>
+        <div class="form-group">
+            <label>Description:</label>
+            <input class="form-input" type="text" id="description" />
+        </div>
+        <div class="form-group">
+            <label for="myfile">Add your image:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+        </div>
+        <div class="form-group">
+            <label>Price: in AUD</label>
+            <input class="form-input" type="number" id="price" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Sell!</button>
+        </div>
+    </form>
+</div>
