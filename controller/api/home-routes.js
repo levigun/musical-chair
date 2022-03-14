@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Family, Instrument } = require('../models');
+const { Family, Instrument } = require('../../models');
 
 // when page loads renders login page
 router.get('/', (req, res) => {
@@ -84,3 +84,5 @@ router.get('/instrument/:id', async (req, res) => {
 router.get('/sell', async (req, res) => {
   res.render('sell');
 });
+
+module.exports = router;
