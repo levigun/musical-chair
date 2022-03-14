@@ -1,16 +1,21 @@
+const {User} = require('../models');
+const {Family} = require('../models');
+const {Instrument} = require('../models');
 const sequelize = require('../config/connection');
 const seedFamily = require('./FamilyData');
 const seedInstrumnets = require('./InstrumentData');
-const seedUsers = require('./UserData');
+const seedUsers = require('./UserData.json');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
+  
+  await User.bulkCreate(seedUsers);
 
-  await seedFamily();
+  await Family.bulkCreate(seedFamily);
 
-  await seedInstrumnets();
+  await Instrument.bulkCreate(seedInstrumnets);
 
-  await seedUsers();
+  
 
   process.exit(0);
 };
