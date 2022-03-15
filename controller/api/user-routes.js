@@ -4,10 +4,11 @@ const { User } = require('../../models');
 const { Instrument } = require('../../models');
 
 // CREATE new user
-router.post('/', async (req, res) => {
+
+router.post('/users', async (req, res) => {
   try {
     const dbUserData = await User.create({
-      username: req.body.username,
+      username: req.body.name,
       email: req.body.email,
       password: req.body.password,
     });
@@ -57,7 +58,7 @@ router.post('/login', async (req, res) => {
 });
 
 // sell
-router.post('./sell', async (req, res) => {
+router.post('/sell', async (req, res) => {
     try {
       const sellData = await Instrument.create({
         instrument_name: req.body.instrument_name,

@@ -1,11 +1,11 @@
 <section>
     <section class="flex-row justify-center">
         <div class="instrument-information">
-            <img src={{image}} alt={{instrument_name}}>
+            <img src="/images/{{image}}">
             <p class="bold">{{instrument_name}}</p>
             <p>Price:$ {{price}}</p>
             <p>{{description}}</p>
-            <p>{{user_id}}</p>
+            <p>Sold by: {{user.username}}</p>
             <button class="btn btn-primary btn-lg">Add to cart!</button>
         </div>
     </section>
