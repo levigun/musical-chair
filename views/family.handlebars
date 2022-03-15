@@ -1,10 +1,11 @@
 <section>
     <section class="justify-center">
+        {{#each families as |family|}}
         <div class="image">
-        {{#each family}}
-            <p class="bold text-center family-name">{{family_name}}</p>
-            <img src={{background_image}} alt="violin">
+            <p class="bold text-center family-name">{{family.family_name}}</p>
+            <a href="/family/{{family.id}}"><img src="{{family.background_image}}"></a>
         </div>
-        {{#each}}
+        {{/each}}
     </section>
 </section>
+

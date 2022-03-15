@@ -4,11 +4,12 @@
         {{#each instruments}}
         <section class="card">
             <div class="card-body">
-                <img src={{image}} alt={{instrument_name}}>
+                <a href="/instrument/{{id}}"><img src="/images/{{image}}"></a>
                 <p class="bold">{{instrument_name}}</p>
-                <p class="bold">{{price}}</p>
-                <p>Sold by: {{user_id}}</p>
+                <p class="bold">$ {{price}}</p>
+                <p>Sold by: {{user.username}}</p>
             </div>
         </section>
+        {{/each}}
     </section>
 </section>

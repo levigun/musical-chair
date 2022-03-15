@@ -20,7 +20,7 @@
         "price": 1299, 
         "description": "Lovely flute for easy listen",
         "image": "flute.jpg",
-        "family_id": 2,
+        "family_id": 3,
         "user_id": 2
     },
     {
@@ -28,7 +28,7 @@
         "price": 2499, 
         "description": "Awesome instrument, as played by Lisa Simpson",
         "image": "saxophone.jpg",
-        "family_id": 2,
+        "family_id": 3,
         "user_id": 2
     },
     {
@@ -36,7 +36,7 @@
         "price": 299, 
         "description": "Funky trumpet for funky people!",
         "image": "trumpet.jpg",
-        "family_id": 3,
+        "family_id": 2,
         "user_id": 2
     },
     {
@@ -44,11 +44,11 @@
         "price": 699, 
         "description": "Trumbones complete the brass band!",
         "image": "trombone.jpg",
-        "family_id": 3,
+        "family_id": 2,
         "user_id": 3
     },
     {
-        "instrument_name": "Cymbols",
+        "instrument_name": "Cymbals",
         "price": 400, 
         "description": "Great addition to any percussion ensemble!",
         "image": "cymbals.jpg",

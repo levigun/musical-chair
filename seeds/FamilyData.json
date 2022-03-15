@@ -1,19 +1,19 @@
  [
     {
       "family_name": "Strings",
-      "background_image": "./assets/images/violin.jpg"
+      "background_image": "/images/violin.jpg"
     },
     {
       "family_name": "Brass",
-      "background_image": "./assets/images/flute.jpg"
+      "background_image": "/images/trumpet.jpg"
     },
     {
       "family_name": "Woodwind",
-      "background_image": "./assets/images/trumpet.jpg"
+      "background_image": "/images/flute.jpg"
     },
     {
       "family_name": "Percussion",
-      "background_image": "./assets/images/triangle.jpg"
+      "background_image": "/images/triangle.jpg"
     }
   ]
 

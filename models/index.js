@@ -15,4 +15,8 @@ Instrument.belongsTo(User, {
     foreignKey: "user_id",
 });
 
+Family.hasMany(Instrument, {
+    foreignKey: "family_id"
+});
+
 module.exports = { User, Family, Instrument };
