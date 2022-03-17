@@ -50,6 +50,7 @@ router.post('/login', async (req, res) => {
 
     // Once the user successfully logs in, set a 'loggedIn' property in the session with the value true
     req.session.loggedIn = true;
+    req.session.user_id = dbUserData.id;
     res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
   } catch (err) {
     console.log(err);
@@ -60,17 +61,23 @@ router.post('/login', async (req, res) => {
 // sell
 router.post('/sell', async (req, res) => {
     try {
+      console.log(req.body);
       const sellData = await Instrument.create({
+        // need access to the family name as the ID, ASK THIS
+        family_id: parseInt(req.body.family_id),
         instrument_name: req.body.instrument_name,
+        image:"",
         description: req.body.description,
-        price: req.body.price,
-        image: req.body.image
+        price: parseInt(req.body.price),
+        user_id: req.session.user_id
+
+        
       });
   
       // Once the user is created they are automatically logged in 
       // so set a 'loggedIn' property in the session with the value true
       req.session.loggedIn = true;
-      res.status(200).json(dbUserData);
+      res.status(200).json(sellData);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
