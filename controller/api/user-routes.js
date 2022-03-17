@@ -16,6 +16,7 @@ router.post('/users', async (req, res) => {
     // Once the user is created they are automatically logged in 
     // so set a 'loggedIn' property in the session with the value true
     req.session.loggedIn = true;
+    req.session.user_id = dbUserData.id;
     res.status(200).json(dbUserData);
   } catch (err) {
     console.log(err);
