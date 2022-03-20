@@ -16,8 +16,10 @@ const sess = {
   secret: 'Super secret secret',
   resave: false,
   saveUninitialized: false,
+  cookie: { secure: true}
 };
 
+app.set('trust proxy', 1);
 app.use(session(sess));
 
 const hbs = exphbs.create();
