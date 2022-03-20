@@ -3,10 +3,11 @@ const express = require('express');
 // Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+var MemoryStore = require('memorystore')(session)
+
 
 const routes = require('./controller');
 const sequelize = require('./config/connection');
-// const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -16,7 +17,10 @@ const sess = {
   secret: 'Super secret secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: true}
+  cookie: { secure: true},
+  store: new MemoryStore ({
+    checkPeriod: 86400000 
+  })
 };
 
 app.set('trust proxy', 1);
@@ -37,5 +41,3 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`http://localhost:${PORT}!`))
 });
 
-
-// adding comments for git push
