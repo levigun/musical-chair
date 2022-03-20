@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-// Import express-session
+const helmet =require('helmet');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
@@ -9,6 +9,7 @@ const routes = require('./controller');
 const sequelize = require('./config/connection');
 
 const app = express();
+app.use(helmet());
 const PORT = process.env.PORT || 3001;
 
 // Set up sessions
