@@ -1,192 +1,191 @@
 :root {
-    --primary: #3d5852;
-    --secondary: #86938f;
-    --tertiary: #5e877f;
-    --quatrinary: #6c6b67;
-    --light: #e3e4e3;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
-    --border-radius: 0.3rem;
-  }
-  
-  body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    background-color:whitesmoke;
-  }
-  
-  a {
-    color: var(--dark);
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: inherit;
-  }
-  
-  header {
-    padding: 40px;
-    text-align: center;
-    background-color: #515856;
-    color: var(--light);
-  }
-  h1 {
-    font-size: 65px;
-  }
-  
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10vh;
-  }
-  
-  form {
-    display:block;
-    text-align:center;
-    padding:10px;
-  }
-  
-  nav {
-    display: flex;
-    background-color: var(--secondary);
-    font-size: 30px;
-  }
-  
-  nav a {
-    color: var(--light);
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    color: var(--secondary);
-    background-color: var(--dark);
-  }
-  
-  .gallery {
-    flex: 4;
-    background-color: #fff;
-    padding: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 100%;
-    transition: color 0.1s;
-    margin-left: 16px;
-  }
-   
-  img {
-    width: 300px;
-    height: 300px;
-  }
+  --primary: #3d5852;
+  --secondary: #86938f;
+  --tertiary: #5e877f;
+  --quatrinary: #6c6b67;
+  --light: #e3e4e3;
+  --dark: #182c23;
+  --error: rgb(228, 46, 1);
+  --border-radius: 0.3rem;
+}
 
-  
-  .painting {
-    width: 50%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-  }
-  
-  .painting-details {
-    text-align: center;
-    padding: 10px 20px;
-    font-weight: bold;
-  }
-  
-  .page-title {
-    text-align: center;
-    font-size: 50px;
-  }
-  .card {
-    margin: 20px;
-    flex: 0 1 300px;
-    border: 7px double var(--dark);
-    border-radius: 10px;
-    background-color: var(--light);
-    color: var(--dark);
-  }
-  
-  .login-card {
-    margin: 0 0 20px 0;
-    flex: 0 0 50%;
-    max-width: 100%;
-    padding: 5px;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-    border-style: double;
-    border-width: thick;
-    background-color: #577a7c;
-    color: var(--light);
-  }
-  
-  .card header {
-    color: var(--light);
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
-    background-color: var(--tertiary);
-    padding: 0.625rem;
-    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
-  }
-  
-  .card-body {
-    font-size: 1.4rem;
-    text-align: center;
-  }
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  background-color:whitesmoke;
+}
 
-  .instrument-information {
-    text-align: center;
-  }
-  
-  .heading {
-    text-transform: uppercase;
-    color: rgb(37, 36, 36);
-    font-size: 50px;
-    text-align: center;
-  }
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
 
-  .bold {
-    font-weight: bold;
-  }
+a:visited {
+  color: inherit;
+}
 
-  .image {
-    margin: 3%;
-    position: relative;
-  }
+header {
+  padding: 40px;
+  text-align: center;
+  background-color: #515856;
+  color: var(--light);
+}
+h1 {
+  font-size: 65px;
+}
 
-  .family-name {
-    position: absolute;
-    top: 17px;
-    left: 70px;
-  }
-  
-  /* LAYOUT */
-  .container {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
-    align-items: center;
-  }
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+}
 
-  .image:hover {
-    cursor: pointer;
-  }
-  
+form {
+  display:block;
+  text-align:center;
+  padding:10px;
+}
 
-  
+nav {
+  display: flex;
+  background-color: var(--secondary);
+  font-size: 30px;
+}
+
+nav a {
+  color: var(--light);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  color: var(--secondary);
+  background-color: var(--dark);
+}
+
+.gallery {
+  flex: 4;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 100%;
+  transition: color 0.1s;
+  margin-left: 16px;
+}
+ 
+img {
+  width: 300px;
+  height: 300px;
+}
+
+
+.painting {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.painting-details {
+  text-align: center;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 50px;
+}
+.card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.login-card {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 100%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #577a7c;
+  color: var(--light);
+}
+
+.card header {
+  color: var(--light);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: var(--tertiary);
+  padding: 0.625rem;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.card-body {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.instrument-information {
+  text-align: center;
+}
+
+.heading {
+  text-transform: uppercase;
+  color: rgb(37, 36, 36);
+  font-size: 50px;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.image {
+  margin: 3%;
+  position: relative;
+}
+
+.family-name {
+  position: absolute;
+  top: 17px;
+  left: 70px;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.image:hover {
+  cursor: pointer;
+}
+
+
