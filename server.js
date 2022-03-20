@@ -3,7 +3,6 @@ const express = require('express');
 // Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-var MemoryStore = require('memorystore')(session)
 
 
 const routes = require('./controller');
@@ -18,9 +17,6 @@ const sess = {
   resave: false,
   saveUninitialized: false,
   cookie: { secure: true},
-  store: new MemoryStore ({
-    checkPeriod: 86400000 
-  })
 };
 
 app.set('trust proxy', 1);
