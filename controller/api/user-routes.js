@@ -2,6 +2,34 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const { Instrument } = require('../../models');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, __dirname + '/../../uploads');
+  },
+  filename: function (req, file, cb) {
+    console.log(file);
+    cb(null, new Date().toISOString() + '-' + file.originalname)
+  },
+});
+
+const fileFilter = (req, file, cb) => {
+  // rejecting a file
+  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+    cb(null, true);
+  } else {
+    cb(null, false);
+  }
+};
+
+const upload = multer({
+  storage: storage, 
+  limits: {
+    filesize: 1024 * 1024 * 5
+  },
+  fileFilter: fileFilter
+});
 
 // CREATE new user
 
@@ -60,30 +88,30 @@ router.post('/login', async (req, res) => {
 });
 
 // sell
-router.post('/sell', async (req, res) => {
-    try {
-      console.log(req.body);
-      const sellData = await Instrument.create({
-        // need access to the family name as the ID, ASK THIS
-        family_id: parseInt(req.body.family_id),
-        instrument_name: req.body.instrument_name,
-        image:"",
-        description: req.body.description,
-        price: parseInt(req.body.price),
-        user_id: req.session.user_id
+router.post('/sell', upload.single('image'), async (req, res, next) => {
+  try {
+    console.log(req.body);
+    const sellData = await Instrument.create({
+      // need access to the family name as the ID, ASK THIS
+      family_id: parseInt(req.body.family_id),
+      instrument_name: req.body.instrument_name,
+      image: '/uploads/' + req.file.filename,
+      description: req.body.description,
+      price: parseInt(req.body.price),
+      user_id: req.session.user_id
 
-        
-      });
-  
-      // Once the user is created they are automatically logged in 
-      // so set a 'loggedIn' property in the session with the value true
-      req.session.loggedIn = true;
-      res.status(200).json(sellData);
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+
+    });
+
+    // Once the user is created they are automatically logged in 
+    // so set a 'loggedIn' property in the session with the value true
+    req.session.loggedIn = true;
+    res.status(200).json(sellData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 
 // Logout
