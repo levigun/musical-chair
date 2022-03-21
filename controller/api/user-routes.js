@@ -11,6 +11,7 @@ const storage = multer.diskStorage({
     const uploads = path.join(__dirname, '../../uploads');
     mkdirp.sync(uploads)
     cb(null, uploads);
+
   },
   filename: function (req, file, cb) {
     console.log(file);
