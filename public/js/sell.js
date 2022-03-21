@@ -2,7 +2,6 @@
 // send a post request to the API endpoint
 // if succesful, redirect to the family page
 const sellFormHandler = async (event) => {
-  console.log("hello");
   event.preventDefault();
 
   const payload = {
