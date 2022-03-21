@@ -34,7 +34,7 @@ This app is a market place to buy and sell musical instruments. You can sign up 
 * CSS
 
 ## Usage
-![our wire frame!](/public/images/Screen%20Shot.png)  
+![our wire frame!](/public/images/Screen%20Shot%202022-03-08%20at%208.51.21%20pm.png)  
 Deployed application link: [musical chair](https://musical-chair.herokuapp.com/)  
 Github Repo: [github repo](https://github.com/levigun/musical-chair)  
 Supporting link:[power point](https://docs.google.com/presentation/d/1Z7AVlscATvzDEZSLwcDE--UMrjV5ZRzdj7yBjVUlrQU/edit?usp=sharing)
