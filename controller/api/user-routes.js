@@ -3,10 +3,11 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const { Instrument } = require('../../models');
 const multer = require('multer');
+const path = require('path');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, __dirname + '/../../uploads');
+    cb(null, path.join( __dirname + '/../../uploads'));
   },
   filename: function (req, file, cb) {
     console.log(file);
