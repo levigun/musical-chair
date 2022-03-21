@@ -4,10 +4,14 @@ const { User } = require('../../models');
 const { Instrument } = require('../../models');
 const multer = require('multer');
 const path = require('path');
+const mkdirp = require('mkdirp');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join( __dirname + '/../../uploads'));
+    const uploads = path.join(__dirname, '../../uploads');
+    mkdirp.sync(uploads)
+    cb(null, uploads);
+
   },
   filename: function (req, file, cb) {
     console.log(file);
