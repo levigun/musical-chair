@@ -23,9 +23,9 @@ Instrument.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-     image: {
+    image: {
        type: DataTypes.STRING,
-       allowNull: false,
+       required: true
     },
     family_id: {
       type: DataTypes.INTEGER,

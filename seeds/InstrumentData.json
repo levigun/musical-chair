@@ -3,7 +3,7 @@
         "instrument_name": "Violin",
         "price": 2499, 
         "description": "Classic 1.5kg violin with case and bow included",
-        "image": "violin.jpg",
+        "image": "/images/violin.jpg",
         "family_id": 1,
         "user_id": 3
     },
@@ -11,7 +11,7 @@
         "instrument_name": "Double Bass",
         "price": 3999, 
         "description": "Classic 3kg Double Base, suitable for jazz and orchestra",
-        "image": "double-bass.jpg",
+        "image": "/images/double-bass.jpg",
         "family_id": 1,
         "user_id": 1
     },
@@ -19,7 +19,7 @@
         "instrument_name": "Flute",
         "price": 1299, 
         "description": "Lovely flute for easy listen",
-        "image": "flute.jpg",
+        "image": "/images/flute.jpg",
         "family_id": 3,
         "user_id": 2
     },
@@ -27,7 +27,7 @@
         "instrument_name": "Saxaphone",
         "price": 2499, 
         "description": "Awesome instrument, as played by Lisa Simpson",
-        "image": "saxophone.jpg",
+        "image": "/images/saxophone.jpg",
         "family_id": 3,
         "user_id": 2
     },
@@ -35,7 +35,7 @@
         "instrument_name": "Trumpet",
         "price": 299, 
         "description": "Funky trumpet for funky people!",
-        "image": "trumpet.jpg",
+        "image": "/images/trumpet.jpg",
         "family_id": 2,
         "user_id": 2
     },
@@ -43,7 +43,7 @@
         "instrument_name": "Trumbone",
         "price": 699, 
         "description": "Trumbones complete the brass band!",
-        "image": "trombone.jpg",
+        "image": "/images/trombone.jpg",
         "family_id": 2,
         "user_id": 3
     },
@@ -51,7 +51,7 @@
         "instrument_name": "Cymbals",
         "price": 400, 
         "description": "Great addition to any percussion ensemble!",
-        "image": "cymbals.jpg",
+        "image": "/images/cymbals.jpg",
         "family_id": 4,
         "user_id": 1
     },
@@ -59,7 +59,7 @@
         "instrument_name": "Triangle",
         "price": 100, 
         "description": "Close your songs with some tings!",
-        "image": "triangle.jpg",
+        "image": "/images/triangle.jpg",
         "family_id": 4,
         "user_id": 3
     }
